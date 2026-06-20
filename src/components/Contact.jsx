@@ -27,7 +27,10 @@ const Contact = () => {
     <>
       <Box
         sx={{
-          minHeight: "80vh",
+          minHeight: {
+            xs: "auto",
+            md: "80vh",
+          },
           bgcolor: "#0b0b0d",
           color: "white",
           display: "flex",
@@ -36,15 +39,22 @@ const Contact = () => {
           textAlign: "center",
           position: "relative",
           overflow: "hidden",
-          // pt: "120px",
-          // pb: "60px",
           borderBottom: "1px solid rgba(115, 114, 114, 0.5)",
+          px: { xs: 2, sm: 3, md: 0 },
+          py: { xs: 6, md: 0 },
         }}
       >
         <Box
           sx={{
-            height: "25vh",
-            width: "70%",
+            width: {
+              xs: "100%",
+              sm: "90%",
+              md: "60%",
+            },
+            minHeight: {
+              xs: "auto",
+              md: "10px",
+            },
             bgcolor: "#000000",
             color: "white",
             display: "flex",
@@ -53,8 +63,14 @@ const Contact = () => {
             textAlign: "center",
             position: "relative",
             overflow: "hidden",
-            pt: "90px",
-            pb: "90px",
+            py: {
+              xs: 5,
+              md: "40px",
+            },
+            px: {
+              xs: 2,
+              md: 4,
+            },
             borderRadius: "20px",
             borderBottom: "2px solid rgba(115, 114, 114, 0.5)",
             borderRight: "2px solid rgba(115, 114, 114, 0.5)",
@@ -135,10 +151,43 @@ const Contact = () => {
             }}
           >
             <Box>
-              <Typography variant="h3" >Have an idea?</Typography>
-              <Typography variant="h3">Let's work together</Typography>
+              <Typography
+                sx={{
+                  fontSize: {
+                    xs: "2rem",
+                    sm: "2.5rem",
+                    md: "3rem",
+                  },
+                  fontWeight: 600,
+                  lineHeight: 1.2,
+                }}
+              >
+                Have an idea?
+              </Typography>
+              <Typography
+                sx={{
+                  fontSize: {
+                    xs: "2rem",
+                    sm: "2.5rem",
+                    md: "3rem",
+                  },
+                  fontWeight: 600,
+                  lineHeight: 1.2,
+                }}
+              >
+                Let's work together
+              </Typography>
             </Box>
-            <Typography variant="body1" sx={{ color: "grey" }}>
+            <Typography
+              sx={{
+                color: "grey",
+                fontSize: {
+                  xs: "0.9rem",
+                  md: "1rem",
+                },
+                px: { xs: 1, md: 0 },
+              }}
+            >
               We'll hit you up within 12 hours to get things moving!
             </Typography>
             <Box>
@@ -155,17 +204,21 @@ const Contact = () => {
                 }
                 sx={{
                   textTransform: "none",
-                  borderRadius: "8px",
-
-                  textTransform: "none",
                   fontWeight: 600,
                   borderRadius: "10px",
-                  px: 3,
-                  py: 1.2,
-                  bgcolor: "#ff4d2d",
-                  "&:hover .arrowIcon": {
-                    transform: "rotate(45deg) translateY(2px)",
+                  px: {
+                    xs: 2.5,
+                    md: 3,
                   },
+                  py: {
+                    xs: 1,
+                    md: 1.2,
+                  },
+                  fontSize: {
+                    xs: "0.9rem",
+                    md: "1rem",
+                  },
+                  bgcolor: "#ff4d2d",
                 }}
               >
                 Let's Talk

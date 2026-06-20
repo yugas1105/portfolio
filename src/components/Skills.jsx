@@ -62,15 +62,25 @@ const Skills = () => {
     <>
       <Box
         sx={{
-          minHeight: "100vh",
+          minHeight: {
+            xs: "auto",
+            md: "100vh",
+          },
           bgcolor: "#0b0b0d",
           color: "#fff",
           display: "flex",
           alignItems: "center",
-          px: 7,
+          px: { xs: 2, sm: 3, md: 7 },
+          py: { xs: 6, md: 0 },
         }}
       >
-        <Grid container spacing={2}>
+        <Grid
+          container
+          spacing={{
+            xs: 5,
+            md: 2,
+          }}
+        >
           {/* 🔥 LEFT - SKILLS */}
 
           <Grid item xs={12} md={6}>
@@ -78,7 +88,12 @@ const Skills = () => {
               <Typography
                 variant="h3"
                 sx={{
-                  mb: 4,
+                  mb: { xs: 3, md: 4 },
+                  fontSize: {
+                    xs: "2rem",
+                    sm: "2.5rem",
+                    md: "3rem",
+                  },
                   background:
                     "linear-gradient(0deg, rgba(166,164,159,1), rgba(255,255,255,1))",
                   WebkitBackgroundClip: "text",
@@ -91,7 +106,10 @@ const Skills = () => {
               <Box
                 sx={{
                   display: "grid",
-                  gridTemplateColumns: "repeat(2, 1fr)",
+                  gridTemplateColumns: {
+                    xs: "1fr",
+                    sm: "repeat(2, 1fr)",
+                  },
                   gap: 3,
                 }}
               >
@@ -101,7 +119,10 @@ const Skills = () => {
                     <Typography
                       sx={{
                         mb: 1,
-                        fontSize: "18px",
+                        fontSize: {
+                          xs: "16px",
+                          md: "18px",
+                        },
                         opacity: 0.6,
                         letterSpacing: "1px",
                       }}
@@ -115,10 +136,14 @@ const Skills = () => {
                         <Box
                           key={j}
                           sx={{
-                            px: 2,
-                            py: 1,
+                            px: { xs: 1.5, md: 2 },
+                            py: { xs: 0.7, md: 1 },
+                            fontSize: {
+                              xs: "12px",
+                              md: "13px",
+                            },
                             borderRadius: "20px",
-                            fontSize: "13px",
+
                             bgcolor: "#111114",
                             border: "1px solid #2a2a2f",
                             transition: "0.3s",
@@ -174,7 +199,11 @@ const Skills = () => {
                   sx={{
                     color: "#888",
                     fontFamily: "monospace",
-                    fontSize: "1rem",
+                    fontSize: {
+                      xs: "0.8rem",
+                      md: "1rem",
+                    },
+                    textAlign: "center",
                   }}
                 >
                   Currently Building Full Stack Applications...
@@ -205,7 +234,12 @@ const Skills = () => {
             <Typography
               variant="h3"
               sx={{
-                mb: 3,
+                mb: { xs: 3, md: 4 },
+                fontSize: {
+                  xs: "2rem",
+                  sm: "2.5rem",
+                  md: "3rem",
+                },
                 background:
                   "linear-gradient(0deg, rgba(166,164,159,1), rgba(255,255,255,1))",
                 WebkitBackgroundClip: "text",
@@ -215,7 +249,7 @@ const Skills = () => {
               Education
             </Typography>
 
-            <Box sx={{ position: "relative", pl: 3 }}>
+            <Box sx={{ position: "relative", pl: { xs: 2, md: 3 } }}>
               {/* Vertical line */}
               <Box
                 sx={{
@@ -224,7 +258,14 @@ const Skills = () => {
                   top: 0,
                   bottom: 0,
                   width: "2px",
-                  height: "400px",
+                  height: {
+                    xs: "100%",
+                    md: "400px",
+                  },
+                  left: {
+                    xs: 6,
+                    md: 10,
+                  },
                   bgcolor: "#ff4d2d",
                 }}
               />
@@ -234,29 +275,28 @@ const Skills = () => {
                   key={index}
                   sx={{
                     position: "sticky",
-                    top: 100, // 🔥 all cards stick at same point
+
+                    top: 100,
                     mb: 1,
-                    zIndex: index, // 🔥 stacking order
+                    zIndex: index, //  stacking order
                   }}
                 >
                   <Paper
                     sx={{
-                      p: 3,
+                      p: { xs: 2, md: 3 },
+                      ml: { xs: 0.5, md: 1 },
                       bgcolor: "#111114",
                       border: "1px solid #2a2a2f",
                       borderRadius: 3,
-                      ml: 1,
+
                       color: "#fff",
                       transition: "0.4s ease",
 
-                      // 🔥 slight offset for visual stacking
-                      transform: `translateY(${index * 10}px)`,
-
-                      // "&:hover": {
-                      //   transform: `translateY(${index * 20 - 6}px) scale(1.02)`,
-                      //   borderColor: "#ff4d2d",
-                      //   boxShadow: "0 10px 30px rgba(0,0,0,0.4)",
-                      // },
+                      //  slight offset for visual stacking
+                      transform: {
+                        xs: "none",
+                        md: `translateY(${index * 10}px)`,
+                      },
                     }}
                   >
                     <Typography fontWeight="bold">{item.title}</Typography>

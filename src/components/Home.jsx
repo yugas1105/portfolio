@@ -100,7 +100,10 @@ const Home = () => {
 
     <Box
       sx={{
-       minHeight: "100vh",
+        minHeight: {
+          xs: "auto",
+          md: "100vh",
+        },
         bgcolor: "#0b0b0d",
         color: "white",
         display: "flex",
@@ -109,9 +112,11 @@ const Home = () => {
         textAlign: "center",
         position: "relative",
         overflow: "hidden",
-        // pt: "74px",
-        // pb: "28px",
-        borderBottom: "1px solid rgba(115, 114, 114, 0.5)",
+        py: {
+          xs: 10,
+          md: 0,
+        },
+        borderBottom: "1px solid rgba(115,114,114,0.5)",
       }}
     >
       {/* Grid Background */}
@@ -178,22 +183,42 @@ const Home = () => {
           }}
         />
       </Box>
-      <Box sx={{ position: "relative", zIndex: 2, maxWidth: "900px", px: 2 ,pt:"120px"}}>
+      <Box
+        sx={{
+          position: "relative",
+          zIndex: 2,
+          maxWidth: "900px",
+          width: "100%",
+          px: {
+            xs: 2,
+            sm: 3,
+            md: 2,
+          },
+          pt: {
+            xs: "90px",
+            md: "120px",
+          },
+        }}
+      >
         <Box
           component="img"
           src={profile}
           ref={imageRef}
           alt="Swati Sonawane"
           sx={{
-            width: 110,
-            height: 110,
+            width: {
+              xs: 90,
+              md: 110,
+            },
+            height: {
+              xs: 90,
+              md: 110,
+            },
             borderRadius: "50%",
             objectFit: "cover",
             objectPosition: "center 15%",
             mx: "auto",
             mb: 2,
-            // border: "3px solid #ff4d2d",
-            // boxShadow: "0 0 25px rgba(255,77,45,0.5)",
           }}
         />
 
@@ -201,10 +226,13 @@ const Home = () => {
         <Typography
           ref={introRef}
           sx={{
-            fontSize: { xs: "18px", md: "22px" },
+            fontSize: {
+              xs: "16px",
+              sm: "18px",
+              md: "22px",
+            },
             mb: 1.5,
             color: "#D1D5DB",
-            letterSpacing: "0.5px",
           }}
         >
           Hello, I'm{" "}
@@ -225,14 +253,20 @@ const Home = () => {
         <Typography
           ref={headingRef}
           sx={{
-            fontSize: { xs: "38px", md: "64px" },
+            fontSize: {
+              xs: "2.5rem",
+              sm: "3rem",
+              md: "4rem",
+            },
             fontWeight: 600,
-            lineHeight: 1.0,
-            fontFamily: "'Inter', sans-serif",
+            lineHeight: {
+              xs: 1.15,
+              md: 1,
+            },
             letterSpacing: "-0.5px",
             mb: 2,
             color: "#F9FAFB",
-            textAlign: "center", // ✅ important
+            textAlign: "center",
           }}
         >
           <Box component="span" sx={{ display: "block" }}>
@@ -282,15 +316,40 @@ const Home = () => {
         <Stack
           direction="row"
           ref={statsRef}
-          spacing={5}
+          spacing={{
+            xs: 2,
+            sm: 4,
+            md: 5,
+          }}
           justifyContent="center"
-          sx={{ mb: 4, flexWrap: "wrap", opacity: 0.8 }}
+          alignItems="center"
+          sx={{
+            mb: 4,
+            opacity: 0.8,
+            flexWrap: "nowrap",
+          }}
         >
-          <Typography sx={{ fontWeight: 500 }}>
+          <Typography
+            sx={{
+              fontWeight: 500,
+              fontSize: {
+                xs: "0.8rem",
+                sm: "1rem",
+              },
+              whiteSpace: "nowrap",
+            }}
+          >
             2
             <Box
               component="span"
-              sx={{ color: "#ff4d2d", fontWeight: 600, fontSize: 20 }}
+              sx={{
+                fontWeight: 500,
+                fontSize: {
+                  xs: "0.8rem",
+                  sm: "1rem",
+                },
+                whiteSpace: "nowrap",
+              }}
             >
               +
             </Box>{" "}
@@ -301,18 +360,41 @@ const Home = () => {
             5
             <Box
               component="span"
-              sx={{ color: "#ff4d2d", fontWeight: 600, fontSize: 20 }}
+              sx={{
+                color: "#ff4d2d",
+                fontWeight: 600,
+                fontSize: {
+                  xs: 16,
+                  sm: 20,
+                },
+              }}
             >
               +
             </Box>{" "}
             Projects Built
           </Typography>
 
-          <Typography sx={{ fontWeight: 500 }}>
+          <Typography
+            sx={{
+              fontWeight: 500,
+              fontSize: {
+                xs: "0.8rem",
+                sm: "1rem",
+              },
+              whiteSpace: "nowrap",
+            }}
+          >
             5
             <Box
               component="span"
-              sx={{ color: "#ff4d2d", fontWeight: 600, fontSize: 20 }}
+              sx={{
+                color: "#ff4d2d",
+                fontWeight: 600,
+                fontSize: {
+                  xs: 16,
+                  sm: 20,
+                },
+              }}
             >
               +
             </Box>{" "}
@@ -322,10 +404,14 @@ const Home = () => {
 
         {/* Buttons */}
         <Stack
-          direction="row"
+          direction={{
+            xs: "row",
+            sm: "row",
+          }}
           spacing={2}
           ref={buttonRef}
           justifyContent="center"
+          alignItems="center"
         >
           <Button
             variant="contained"
@@ -341,12 +427,9 @@ const Home = () => {
               textTransform: "none",
               fontWeight: 600,
               borderRadius: "12px",
-            
+
               bgcolor: "#ff4d2d",
-              // boxShadow: "0 8px 25px rgba(255,77,45,0.35)",
-              // "&:hover": {
-              //   bgcolor: "#ff6a4a",
-              // },
+
               "&:hover .arrowIcon": {
                 transform: "rotate(45deg)",
               },
@@ -371,7 +454,6 @@ const Home = () => {
             View Resume
           </Button>
         </Stack>
-        
       </Box>
     </Box>
   );

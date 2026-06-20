@@ -14,17 +14,20 @@ const Gallery = () => {
   return (
     <Box
       sx={{
-        minHeight: "100vh",
+        minHeight: {
+            xs: "auto",
+            md: "60vh",
+          },
         bgcolor: "#0b0b0d",
         color: "white",
         display: "flex",
-        flexDirection: "column", // ✅ important
+        flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
         position: "relative",
         overflow: "hidden",
-        px: 4,
-        pt:4
+        px: { xs: 2, md: 4 },
+        py: { xs: 6, md: 4 },
       }}
     >
       {/*  TEXT */}
@@ -38,6 +41,11 @@ const Gallery = () => {
         <Typography
           variant="h3"
           sx={{
+            fontSize: {
+              xs: "2rem",
+              sm: "2.5rem",
+              md: "3rem",
+            },
             background:
               "linear-gradient(0deg, rgba(166,164,159,1) 34%, rgba(255,255,255,1) 79%)",
             WebkitBackgroundClip: "text",
@@ -49,7 +57,15 @@ const Gallery = () => {
 
         <Typography
           variant="subtitle1"
-          sx={{ color: "rgb(160, 160, 158)", mt: 2 }}
+          sx={{
+            color: "rgb(160, 160, 158)",
+            mt: 2,
+            px: { xs: 1, md: 0 },
+            fontSize: {
+              xs: "0.9rem",
+              md: "1rem",
+            },
+          }}
         >
           A collection of creative visuals showcasing creative and innovative
           design.
@@ -69,13 +85,11 @@ const Gallery = () => {
         }
         sx={{
           textTransform: "none",
-          borderRadius: "8px",
-          mb:8,
-          textTransform: "none",
           fontWeight: 600,
           borderRadius: "10px",
-          // px: 3,
-          // py: 1.2,
+          mb: { xs: 4, md: 8 },
+          px: { xs: 2.5, md: 3 },
+          py: { xs: 1, md: 1.2 },
           bgcolor: "#ff4d2d",
           "&:hover .arrowIcon": {
             transform: "rotate(45deg) translateY(2px)",
@@ -92,7 +106,10 @@ const Gallery = () => {
             display: "flex",
             gap: 2,
             width: "max-content",
-            animation: "scroll 25s linear infinite",
+            animation: {
+              xs: "scroll 18s linear infinite",
+              md: "scroll 25s linear infinite",
+            },
           }}
         >
           {loopImages.map((img, i) => (
@@ -102,15 +119,23 @@ const Gallery = () => {
               src={img}
               alt="gallery"
               sx={{
-                width: "450px",
-                height: "380px",
+                width: {
+                  xs: "280px",
+                  sm: "340px",
+                  md: "450px",
+                },
+                height: {
+                  xs: "220px",
+                  sm: "280px",
+                  md: "380px",
+                },
                 objectFit: "cover",
                 borderRadius: "16px",
                 border: "1px solid rgba(255,255,255,0.1)",
                 transition: "0.4s ease",
 
                 "&:hover": {
-                  transform: "scale(1.05)",
+                  transform: "scale(1.03)",
                   borderColor: "#ff4d2d",
                 },
               }}

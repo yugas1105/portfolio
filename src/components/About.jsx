@@ -113,16 +113,15 @@ const About = () => {
         color: "white",
         display: "flex",
         alignItems: "center",
-        // pb: 6,
+        py: { xs: 0, md: 3 },
       }}
     >
       <Container maxWidth="xl">
         <Box sx={{ mb: 8, overflow: "hidden" }}>
           <Box
-            ref={contactRef}
             sx={{
               display: "flex",
-              gap: 2,
+              gap: { xs: 1, md: 2 },
               width: "max-content",
               animation: "scroll 20s linear infinite",
             }}
@@ -140,14 +139,14 @@ const About = () => {
                     display: "flex",
                     alignItems: "center",
                     gap: 1,
-                    px: 3,
-                    py: 1.2,
+                    px: { xs: 1.5, md: 3 },
+                    py: { xs: 0.8, md: 1.2 },
                     borderRadius: "30px",
                     bgcolor: "#111114",
                     border: "1px solid #2a2a2f",
                     whiteSpace: "nowrap",
                     transition: "0.3s",
-                    fontSize: "18px",
+                    fontSize: { xs: "12px", md: "18px" },
                     cursor: "pointer",
                     "&:hover": {
                       border: "1px solid #ff4d2d",
@@ -199,8 +198,9 @@ const About = () => {
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
-              p: 6,
-              pr: 0,
+              p: { xs: 2, md: 6 },
+              pr: { xs: 2, md: 0 },
+              textAlign: { xs: "center", md: "left" },
               // ml:2
             }}
           >
@@ -211,7 +211,12 @@ const About = () => {
               sx={{
                 fontFamily: "'Inter', sans-serif",
                 letterSpacing: "0.2px",
-                fontSize: 40,
+                fontSize: {
+                  xs: "2rem",
+                  sm: "2.5rem",
+                  md: "3rem",
+                },
+                lineHeight: 1.2,
               }}
             >
               {/* <span>Turning Ideas into</span> */}
@@ -233,7 +238,15 @@ const About = () => {
 
             <Typography
               ref={textRef}
-              sx={{ mt: 3, opacity: 0.8, lineHeight: 1.7, fontSize: 18 }}
+              sx={{
+                mt: 3,
+                opacity: 0.8,
+                lineHeight: 1.7,
+                fontSize: {
+                  xs: "15px",
+                  md: "18px",
+                },
+              }}
             >
               I am a passionate Full-Stack Web Developer with hands-on
               experience in building modern and scalable web applications.
@@ -255,10 +268,16 @@ const About = () => {
             sx={{
               display: "flex",
               flexDirection: "column",
-              justifyContent: "center",
-              p: 4,
-              position: "sticky",
-              top: "100px",
+              justifyContent: { xs:"left",md:"center"},
+              p: {xs:0,md:4},
+              position: {
+                xs: "relative",
+                md: "sticky",
+              },
+              top: {
+                xs: 0,
+                md: "100px",
+              },
               height: "fit-content",
             }}
           >
