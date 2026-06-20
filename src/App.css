@@ -1,0 +1,11 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.app-container {
+  background-color: #f0f2f5;
+  min-height: 100vh;
+  padding: 20px 0;
+}
