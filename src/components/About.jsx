@@ -84,7 +84,7 @@ const About = () => {
       name: "linkedin.com/in/swati-sonawane",
       type: "linkedin",
       icon: <FaLinkedin />,
-      link: "https://www.linkedin.com/in/swati-sonawane",
+      link: "https://www.linkedin.com/in/swati-sonawane-11nov2005",
     },
     {
       name: "github.com/yugas1105",
