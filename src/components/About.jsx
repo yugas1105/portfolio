@@ -246,12 +246,26 @@ const About = () => {
                   xs: "15px",
                   md: "18px",
                 },
+                 display: {
+                  xs: "none",
+                  md: "block",
+                },
               }}
             >
               I am a passionate Full-Stack Web Developer with hands-on
               experience in building modern and scalable web applications.
-              <br />
-              <br />
+            </Typography>
+
+            <Typography
+              ref={textRef}
+              sx={{
+                mt: 2,
+                opacity: 0.8,
+                lineHeight: 1.7,
+                fontSize: "18px",
+               
+              }}
+            >
               Currently working as a Web Developer Intern, I enjoy building
               real-world projects, designing APIs, and solving problems using
               DSA.
@@ -268,8 +282,8 @@ const About = () => {
             sx={{
               display: "flex",
               flexDirection: "column",
-              justifyContent: { xs:"left",md:"center"},
-              p: {xs:0,md:4},
+              justifyContent: { xs: "left", md: "center" },
+              p: { xs: 0, md: 4 },
               position: {
                 xs: "relative",
                 md: "sticky",

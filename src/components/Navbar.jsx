@@ -13,6 +13,7 @@ import {
   ListItemText,
 } from "@mui/material";
 import NorthEastIcon from "@mui/icons-material/NorthEast";
+import CloseIcon from "@mui/icons-material/Close";
 import { gsap } from "gsap";
 import CodeIcon from "@mui/icons-material/Code";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -86,13 +87,22 @@ const Navbar = () => {
                 setMobileOpen(false);
               }}
               sx={{
+                py: 2,
+                justifyContent: "center",
+                textAlign: "center",
                 "&:hover": {
                   bgcolor: "rgba(255,77,45,0.1)",
                   color: "#ff4d2d",
                 },
               }}
             >
-              <ListItemText primary={item.name} />
+              <ListItemText
+                primary={item.name}
+                primaryTypographyProps={{
+                  textAlign: "center",
+                  fontSize: "1.1rem",
+                }}
+              />
             </ListItemButton>
           </ListItem>
         ))}
@@ -133,7 +143,6 @@ const Navbar = () => {
         borderRadius: "15px",
         bgcolor: "rgb(23 25 28)",
         borderBottom: "2px solid rgba(115, 114, 114, 0.5)",
-
         boxShadow: "0 10px 30px rgba(0,0,0,0.35)",
       }}
     >
@@ -215,17 +224,24 @@ const Navbar = () => {
           }}
           onClick={handleDrawerToggle}
         >
-          <MenuIcon />
+          {mobileOpen ? <CloseIcon /> : <MenuIcon />}
         </IconButton>
         <Drawer
-          anchor="right"
+          anchor="top"
           open={mobileOpen}
           onClose={handleDrawerToggle}
           PaperProps={{
             sx: {
               bgcolor: "#17191c",
               color: "#fff",
-              width: 280,
+              borderBottomLeftRadius: "20px",
+              borderBottomRightRadius: "20px",
+              mt: "85px", // below navbar
+              width: "95%",
+              mx: "auto",
+              left: "50%",
+              transform: "translateX(-50%)",
+              overflow: "hidden",
             },
           }}
         >
