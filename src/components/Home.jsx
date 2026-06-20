@@ -146,8 +146,8 @@ const Home = () => {
             position: "absolute",
             top: "-100px",
             left: "-100px",
-            width: "300px",
-            height: "300px",
+            width: {md:"300px"},
+            height: {md:"300px"},
             background: "rgba(105, 103, 103, 0.39)",
             filter: "blur(120px)",
             borderRadius: "50%",
@@ -207,11 +207,11 @@ const Home = () => {
           alt="Swati Sonawane"
           sx={{
             width: {
-              xs: 90,
+              xs: 100,
               md: 110,
             },
             height: {
-              xs: 90,
+              xs: 100,
               md: 110,
             },
             borderRadius: "50%",
@@ -343,12 +343,12 @@ const Home = () => {
             <Box
               component="span"
               sx={{
-                fontWeight: 500,
+                color: "#ff4d2d",
+                fontWeight: 600,
                 fontSize: {
-                  xs: "0.8rem",
-                  sm: "1rem",
+                  xs: 16,
+                  sm: 20,
                 },
-                whiteSpace: "nowrap",
               }}
             >
               +
@@ -356,7 +356,14 @@ const Home = () => {
             Years Coding
           </Typography>
 
-          <Typography sx={{ fontWeight: 500 }}>
+          <Typography sx={{
+              fontWeight: 500,
+              fontSize: {
+                xs: "0.8rem",
+                sm: "1rem",
+              },
+              whiteSpace: "nowrap",
+            }}>
             5
             <Box
               component="span"

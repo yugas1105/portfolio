@@ -30,8 +30,14 @@ const Footer = () => {
         bgcolor: "#0b0b0d",
         color: "#fff",
         borderTop: "1px solid rgba(255,255,255,0.08)",
-        py: 2,
-        px: 3,
+        py: {
+          xs: 3,
+          md: 2,
+        },
+        px: {
+          xs: 2,
+          md: 3,
+        },
       }}
     >
       {/* MAIN CONTENT */}
@@ -40,17 +46,46 @@ const Footer = () => {
           maxWidth: "1100px",
           mx: "auto",
           display: "flex",
+          flexDirection: {
+            xs: "column",
+            md: "row",
+          },
           justifyContent: "space-between",
           alignItems: "center",
-          flexWrap: "wrap",
-          gap: 3,
+          gap: {
+            xs: 2,
+            md: 3,
+          },
+          textAlign: "center",
         }}
       >
         {/* LEFT */}
-         <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-          {/* <CodeIcon sx={{ color: "#ff4d2d", fontSize: 28 }} /> */}
-          <CodeIcon sx={{ color: "#ff4d2d", fontSize: 36 }} />
-          <Typography variant="h5" sx={{ fontWeight: 600 }}>
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            gap: 1,
+          }}
+        >
+          <CodeIcon
+            sx={{
+              color: "#ff4d2d",
+              fontSize: {
+                xs: 28,
+                md: 36,
+              },
+            }}
+          />
+
+          <Typography
+            sx={{
+              fontWeight: 600,
+              fontSize: {
+                xs: "1.2rem",
+                md: "1.5rem",
+              },
+            }}
+          >
             Portfolio
           </Typography>
         </Box>
@@ -58,16 +93,34 @@ const Footer = () => {
         {/* CENTER */}
         <Typography
           sx={{
-            fontSize: "14px",
+            fontSize: {
+              xs: "12px",
+              md: "14px",
+            },
             opacity: 0.6,
             textAlign: "center",
+            order: {
+              xs: 3,
+              md: 2,
+            },
           }}
         >
           © 2026 Swati Sonawane. All rights reserved.
         </Typography>
-
         {/* RIGHT (ICONS) */}
-        <Box sx={{ display: "flex", gap: 2 }}>
+        <Box
+          sx={{
+            display: "flex",
+            gap: {
+              xs: 1.5,
+              md: 2,
+            },
+            order: {
+              xs: 2,
+              md: 3,
+            },
+          }}
+        >
           {socials.map((item, i) => (
             <Box
               key={i}
@@ -76,8 +129,14 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               sx={{
-                width: 38,
-                height: 38,
+                width: {
+                  xs: 34,
+                  md: 38,
+                },
+                height: {
+                  xs: 34,
+                  md: 38,
+                },
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
