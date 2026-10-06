@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from "react";
 import { Box, Typography, Button, Stack } from "@mui/material";
 import NorthEastIcon from "@mui/icons-material/NorthEast";
 import profile from "../assets/swati-pic.png";
-import resume from "../assets/Swati_Sonawane_Resume.pdf";
 import { gsap } from "gsap";
 
 const Home = () => {
@@ -450,7 +449,7 @@ const Home = () => {
 
           <Button
             variant="outlined"
-            onClick={() => window.open(resume, "_blank")}
+            onClick={() => window.open("/resume.pdf", "_blank")}
             sx={{
               textTransform: "none",
               borderRadius: "12px",
