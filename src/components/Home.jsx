@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { Box, Typography, Button, Stack } from "@mui/material";
 import NorthEastIcon from "@mui/icons-material/NorthEast";
 import profile from "../assets/swati-pic.png";
+import resume from "../assets/Swati_Sonawane_Resume.pdf";
 import { gsap } from "gsap";
 
 const Home = () => {
@@ -146,8 +147,8 @@ const Home = () => {
             position: "absolute",
             top: "-100px",
             left: "-100px",
-            width: {md:"300px"},
-            height: {md:"300px"},
+            width: { md: "300px" },
+            height: { md: "300px" },
             background: "rgba(105, 103, 103, 0.39)",
             filter: "blur(120px)",
             borderRadius: "50%",
@@ -356,15 +357,17 @@ const Home = () => {
             Years Coding
           </Typography>
 
-          <Typography sx={{
+          <Typography
+            sx={{
               fontWeight: 500,
               fontSize: {
                 xs: "0.8rem",
                 sm: "1rem",
               },
               whiteSpace: "nowrap",
-            }}>
-            5
+            }}
+          >
+            18
             <Box
               component="span"
               sx={{
@@ -391,7 +394,7 @@ const Home = () => {
               whiteSpace: "nowrap",
             }}
           >
-            5
+            100
             <Box
               component="span"
               sx={{
@@ -447,6 +450,7 @@ const Home = () => {
 
           <Button
             variant="outlined"
+            onClick={() => window.open(resume, "_blank")}
             sx={{
               textTransform: "none",
               borderRadius: "12px",
