@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { Box, Typography, Button, Stack } from "@mui/material";
 import NorthEastIcon from "@mui/icons-material/NorthEast";
-import profile from "../assets/My Profile.jpeg";
+import profile from "../assets/swati-pic.png";
 import { gsap } from "gsap";
 
 const Home = () => {

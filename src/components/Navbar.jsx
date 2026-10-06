@@ -141,7 +141,7 @@ const Navbar = () => {
         transform: "translateX(-50%)",
         width: { xs: "95%", md: "85%" },
         borderRadius: "15px",
-        bgcolor: "rgb(23 25 28)",
+        bgcolor: "rgb(11, 8, 8)",
         borderBottom: "2px solid rgba(115, 114, 114, 0.5)",
         boxShadow: "0 10px 30px rgba(0,0,0,0.35)",
       }}
